@@ -73,7 +73,7 @@ function createItemfromProduct(product, categories) {
 
     shortdesc = convert(product["description"]).substring(0, 150) + "...";
     let Item = {
-        "ID": product["product_id"],
+        "ID": "Mery" + product["product_id"],
         "STAGE": "TESTING",
         "CATEGORY_ID": product_category,
         "BRAND_ID": product["manufacturer"],
@@ -152,7 +152,7 @@ app.get('/xmlOutput', (req, res, next) => {
         console.log("async code running");
         let xml = await formatXml();
         console.log("took ", Date.now() - now, "ms");
-        res.send(await xml);
+        res.send('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>' + await xml);
     })();
 });
 // Updating response.xml with data from Shoprenter
