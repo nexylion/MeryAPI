@@ -152,7 +152,8 @@ app.get('/xmlOutput', (req, res, next) => {
         console.log("async code running");
         let xml = await formatXml();
         console.log("took ", Date.now() - now, "ms");
-        res.send('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>' + await xml);
+        xml = '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>' + await xml;
+        res.send(xml);
     })();
 });
 // Updating response.xml with data from Shoprenter
