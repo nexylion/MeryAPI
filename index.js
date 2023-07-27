@@ -119,14 +119,14 @@ function getFromFile() {
 async function formatXml() {
 
     let Item = [];
-    let categories = await csvToJson().fromFile(path.resolve("kategoriak.csv"));
+    let categories = await csvToJson().fromFile("kategoriak.csv");
     let jsonObj = await getFromFile();
     jsonObj["products"]["product"].forEach(element => {
         Item.push(createItemfromProduct(element, categories));
     });
     let Items = {
-        "Items": {
-            "Item": Item
+        "ITEMS": {
+            "ITEM": Item
         }
     };
     const options = {
