@@ -43,13 +43,13 @@ function csvToArr(stringVal, splitter) {
 }
 
 function createItemfromProduct(product, categories) {
-    let product_category;
+    let product_category = "";
     categories.forEach(category => {
         if (product["categories"] === category["shoprenter"]) {
             product_category = category["mall"];
         }
     });
-    let shortdesc;
+    let shortdesc = "";
     let salePrice = Math.round(product["price_special"] * 0.127) * 10;
     let rPrice = Math.round(product["price"] * 0.127) * 10;
     let media = [];
