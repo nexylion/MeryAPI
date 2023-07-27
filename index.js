@@ -14,7 +14,7 @@ const timeout = 10 * 60 * 1000; // timeout 10mins
 
 // Configuration
 const PORT = 80;
-const HOST = "18.214.195.94";
+const HOST = "0.0.0.0";
 const API_SERVICE_URL = "https://jsonplaceholder.typicode.com";
 
 
