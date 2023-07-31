@@ -82,12 +82,12 @@ function createItemfromProduct(product, categories) {
         "ID": "Mery" + product["product_id"],
         "STAGE": "TESTING",
         "CATEGORY_ID": product_category,
-        "BRAND_ID": product["manufacturer"],
+        "BRAND_ID": product["manufacturer"], //todo same like the category: read from file and if its matches than change it to it, if not than set it to MeryStyle
         "TITLE": product["name"],
         "SHORTDESC": shortdesc,
         "LONGDESC": product["description"],
         "PRIORITIES": 1,
-        "PACKAGE_SIZE": "Smallbox", //todo
+        "PACKAGE_SIZE": "Smallbox",
         "BARCODE": product["ean"],
         "PRICE": salePrice,
         "VAT": 27,
@@ -169,7 +169,7 @@ app.get('/Update', (req, res, next) => {
     var xhr = new XMLHttpRequest();
 
     xhr.open("GET", api_url);
-    xhr.setRequestHeader("Authorization", encode("marashop", "Mara1234"));
+    xhr.setRequestHeader("Authorization", "bWFyYXNob3A6TWFyYTEyMzQ=");
     xhr.onprogress = event => {
         // event.loaded returns how many bytes are downloaded
         // event.total returns the total number of bytes
