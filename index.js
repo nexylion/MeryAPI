@@ -163,8 +163,9 @@ app.get('/xmlOutput', (req, res, next) => {
     })();
 });
 // Updating response.xml with data from Shoprenter
-const api_url = "https://www.marapiac.hu/api/?route=export/feed&id=emag";
+
 app.get('/Update', (req, res, next) => {
+    const api_url = "https://www.marapiac.hu/api/?route=export/feed&id=emag";
     console.log("update started!");
     var xhr = new XMLHttpRequest();
 
@@ -191,6 +192,35 @@ app.get('/Update', (req, res, next) => {
     }
     xhr.send();
 }); // Authorization
+
+app.get('/getBrands', (req, res, next) => {
+    console.log("getBrands started!");
+    const api_url = "https://mpapi.mallgroup.com/v1/brands?client_id=78776eee50d86e8e05b00dca2ab29e0d8689c74fbd7a0769b50a8617e1e141a6";
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("GET", api_url);
+    xhr.onprogress = event => {
+        // event.loaded returns how many bytes are downloaded
+        // event.total returns the total number of bytes
+        // event.total is only available if server sends `Content-Length` header
+        console.log(`Downloaded ${event.loaded} of ${event.total} bytes`)
+    }
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            console.log(xhr.status);
+            fs.writeFile(path.resolve('brands.xml'), xhr.responseText, (err) => {
+                // throws an error, you could also catch it here
+                if (err) throws(err);
+
+                // success case, the file was saved
+                res.send(200)
+                console.log('Response updated!');
+            });
+        }
+    }
+    xhr.send();
+}); // Authorization
+
 app.use('', (req, res, next) => {
     if (req.headers.authorization) {
         next();
