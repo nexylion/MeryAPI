@@ -106,7 +106,7 @@ function createItemfromProduct(product, categories, brands) {
         "TITLE": product["name"],
         "SHORTDESC": shortdesc,
         "LONGDESC": product["description"],
-        "PRIORITIES": 1,
+        "PRIORITY": 1,
         "PACKAGE_SIZE": "Smallbox",
         "BARCODE": product["ean"],
         "PRICE": salePrice,
