@@ -41,9 +41,15 @@ function csvToArr(stringVal, splitter) {
     });
     return formedArr;
 }
+//simple string formatting
+function stringEqualizer(manufacturer) {
+    return manufacturer.toUpperCase().replace(/\s/g, '');;
 
-function createItemfromProduct(product, categories) {
+}
+
+function createItemfromProduct(product, categories, brands) {
     let product_category = "";
+
     categories.forEach(category => {
 
         if (product["category"] != null && category["shoprenter"] != null) {
@@ -55,6 +61,20 @@ function createItemfromProduct(product, categories) {
         }
 
     });
+    let product_brand = "MERYSTYLE";
+    for (let i = 0; i < brands.length; i++) {
+        if (stringEqualizer(product["manufacturer"].toString()) == "MERYSTYLE") { break }
+        if (stringEqualizer(product["manufacturer"].toString()) == "HOLMI") { break }
+        if (stringEqualizer(product["manufacturer"].toString()) == "MARASHOP") { break }
+        const brand = brands[i];
+        if (product["manufacturer"] != null && brand["title"] != null) {
+            if (stringEqualizer(product["manufacturer"].toString()) == stringEqualizer(brand["title"].toString())) {
+                product_brand = brand["brand_id"];
+                break;
+            }
+        }
+    }
+
     let shortdesc = "";
     let salePrice = Math.round(product["price_special"] * 0.127) * 10;
     let rPrice = Math.round(product["price"] * 0.127) * 10;
@@ -82,7 +102,7 @@ function createItemfromProduct(product, categories) {
         "ID": "Mery" + product["product_id"],
         "STAGE": "TESTING",
         "CATEGORY_ID": product_category,
-        "BRAND_ID": product["manufacturer"], //todo same like the category: read from file and if its matches than change it to it, if not than set it to MeryStyle
+        "BRAND_ID": product_brand, //PRODUCT_BRAND default is MERYSTYLE
         "TITLE": product["name"],
         "SHORTDESC": shortdesc,
         "LONGDESC": product["description"],
@@ -100,11 +120,11 @@ function createItemfromProduct(product, categories) {
 
     return Item;
 }
-
-function getFromFile() {
+//returns a jsonobject from an xml file
+function getFromFile(filepath) {
     return new Promise((resolve, reject) => {
 
-        fs.readFile((path.resolve('response.xml')), 'utf8', (err, data) => {
+        fs.readFile((path.resolve(filepath)), 'utf8', (err, data) => {
             if (err) {
                 console.error(err);
                 reject(err);
@@ -112,7 +132,6 @@ function getFromFile() {
             if (true) {
                 const parser = new XMLParser();
                 let jsonObj = parser.parse(data);
-                let Items = [];
                 // console.log(jsonObj);
                 resolve(jsonObj);
             }
@@ -125,10 +144,11 @@ function getFromFile() {
 async function formatXml() {
 
     let Item = [];
+    let BrandsXml = JSON.parse(fs.readFileSync("brands.xml"));
     let categories = await csvToJson().fromFile("kategoriak.csv");
-    let jsonObj = await getFromFile();
+    let jsonObj = await getFromFile('response.xml');
     jsonObj["products"]["product"].forEach(element => {
-        Item.push(createItemfromProduct(element, categories));
+        Item.push(createItemfromProduct(element, categories, BrandsXml["data"]));
     });
     let Items = {
         "ITEMS": {
