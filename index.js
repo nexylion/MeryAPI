@@ -79,19 +79,21 @@ function createItemfromProduct(product, categories, brands) {
     let salePrice = Math.round(product["price_special"] * 0.127) * 10;
     let rPrice = Math.round(product["price"] * 0.127) * 10;
     let media = [];
+    reg = new RegExp('cache\/.+\/')
+
     media.push({
-        URL: product["image_url"],
+        URL: product["image_url"].replace(reg, "data/product/"),
         MAIN: true,
 
     });
     media.push({
-        URL: product["image_url_2"],
+        URL: product["image_url_2"].replace(reg, "data/product/"),
         MAIN: false,
         ENERGY_LABEL: false,
         INFORMATION_LIST: true
     });
     media.push({
-        URL: product["image_url_3"],
+        URL: product["image_url_3"].replace(reg, "data/product/"),
         MAIN: false,
         ENERGY_LABEL: false,
         INFORMATION_LIST: true
