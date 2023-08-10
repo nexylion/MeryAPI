@@ -90,13 +90,13 @@ function createItemfromProduct(product, categories, brands) {
         URL: product["image_url_2"].replace(reg, "data/product/"),
         MAIN: false,
         ENERGY_LABEL: false,
-        INFORMATION_LIST: true
+        INFORMATION_LIST: false
     });
     media.push({
         URL: product["image_url_3"].replace(reg, "data/product/"),
         MAIN: false,
         ENERGY_LABEL: false,
-        INFORMATION_LIST: true
+        INFORMATION_LIST: false
     });
 
     shortdesc = convert(product["description"]).substring(0, 150) + "...";
