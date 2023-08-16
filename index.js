@@ -80,20 +80,21 @@ function createItemfromProduct(product, categories, brands) {
     let rPrice = Math.round(product["price"] * 0.127) * 10;
     let media = [];
     reg = new RegExp('cache\/.+\/')
+    reg2 = new RegExp('\?v=.*')
 
     media.push({
-        URL: product["image_url"].replace(reg, "data/product/"),
+        URL: product["image_url"].replace(reg, "data/product/").replace(reg2, ""),
         MAIN: true,
 
     });
     media.push({
-        URL: product["image_url_2"].replace(reg, "data/product/"),
+        URL: product["image_url_2"].replace(reg, "data/product/").replace(reg2, ""),
         MAIN: false,
         ENERGY_LABEL: false,
         INFORMATION_LIST: false
     });
     media.push({
-        URL: product["image_url_3"].replace(reg, "data/product/"),
+        URL: product["image_url_3"].replace(reg, "data/product/").replace(reg2, ""),
         MAIN: false,
         ENERGY_LABEL: false,
         INFORMATION_LIST: false
