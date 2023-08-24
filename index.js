@@ -3,7 +3,7 @@ const fs = require('fs');
 const morgan = require("morgan");
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const { XMLParser, XMLValidator, XMLBuilder } = require('fast-xml-parser');
-const path = require('node:path');
+const path = require('path');
 const csvToJson = require('csvtojson');
 const { convert } = require('html-to-text');
 const { throws } = require('assert');
@@ -80,7 +80,7 @@ function createItemfromProduct(product, categories, brands) {
     let rPrice = Math.round(product["price"] * 0.127) * 10;
     let media = [];
     reg = new RegExp('cache\/.+\/')
-    reg2 = new RegExp('\?v=.*')
+    reg2 = new RegExp(/\?v=.*./)
 
     media.push({
         URL: product["image_url"].replace(reg, "data/product/").replace(reg2, ""),
