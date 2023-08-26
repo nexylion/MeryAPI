@@ -137,6 +137,19 @@ function createItemfromProduct(product, categories, brands) {
 
     return Item;
 }
+
+function createAvalibilityfromProduct(product) {
+    let active = false;
+    if (product["stock"] != 0) {
+        active = true
+    }
+    let AVAILABILITY = {
+        ID: "Mery" + product["product_id"],
+        IN_STOCK: product["stock"],
+        ACTIVE: active
+    }
+
+}
 //returns a jsonobject from an xml file
 function getFromFile(filepath) {
     return new Promise((resolve, reject) => {
@@ -181,6 +194,28 @@ async function formatXml() {
     var xml = await builder.build(Items);
     return await xml;
 }
+async function formatXmlAvailability() {
+
+    let Availability = [];
+    let jsonObj = await getFromFile('response.xml');
+    jsonObj["products"]["product"].forEach(element => {
+        Availability.push(createAvalibilityfromProduct(element));
+    });
+    let Availabilities = {
+        "AVAILABILITIES": {
+            "AVAILABILITY": Availability
+        }
+    };
+    const options = {
+        processEntities: true,
+        format: true,
+        ignoreAttributes: false
+    };
+    var builder = new XMLBuilder(await options);
+    var xml = await builder.build(Availabilities);
+    return await xml;
+}
+
 
 // Logging
 app.use(morgan('dev'));
@@ -194,6 +229,20 @@ app.get('/xmlOutput', (req, res, next) => {
     (async() => {
         console.log("async code running");
         let xml = await formatXml();
+        console.log("took ", Date.now() - now, "ms");
+        xml = '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>' + await xml;
+        res.send(xml);
+    })();
+});
+app.get('/avalability', (req, res, next) => {
+
+    const now = Date.now();
+    console.log("started at", now);
+    res.header('Content-Type', "application/xml");
+    res.header('Keep-alive', "timeout=" + timeout);
+    (async() => {
+        console.log("async code running");
+        let xml = await formatXmlAvailability();
         console.log("took ", Date.now() - now, "ms");
         xml = '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>' + await xml;
         res.send(xml);
