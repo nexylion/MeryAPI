@@ -88,25 +88,31 @@ function createItemfromProduct(product, categories, brands) {
         return url.replace(reg, "data/").replace(reg2, "").replace(reg3, "//www.marapiac.hu");
     }
 
+    if (product["image_url"]) {
 
-    media.push({
-        URL: imageUrlEdit(product["image_url"]),
-        MAIN: true,
 
-    });
-    media.push({
-        URL: imageUrlEdit(product["image_url_2"]),
-        MAIN: false,
-        ENERGY_LABEL: false,
-        INFORMATION_LIST: false
-    });
-    media.push({
-        URL: imageUrlEdit(product["image_url_3"]),
-        MAIN: false,
-        ENERGY_LABEL: false,
-        INFORMATION_LIST: false
-    });
+        media.push({
+            URL: imageUrlEdit(product["image_url"]),
+            MAIN: true,
 
+        });
+    }
+    if (product["image_url_2"]) {
+        media.push({
+            URL: imageUrlEdit(product["image_url_2"]),
+            MAIN: false,
+            ENERGY_LABEL: false,
+            INFORMATION_LIST: false
+        });
+    }
+    if (product["image_url_3"]) {
+        media.push({
+            URL: imageUrlEdit(product["image_url_3"]),
+            MAIN: false,
+            ENERGY_LABEL: false,
+            INFORMATION_LIST: false
+        });
+    }
     shortdesc = convert(product["description"]).substring(0, 150) + "...";
     let Item = {
         "ID": "Mery" + product["product_id"],
