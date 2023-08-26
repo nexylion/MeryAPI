@@ -148,6 +148,7 @@ function createAvalibilityfromProduct(product) {
         IN_STOCK: product["stock"],
         ACTIVE: active
     }
+    return AVAILABILITY;
 
 }
 //returns a jsonobject from an xml file
