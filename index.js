@@ -7,6 +7,7 @@ const path = require('path');
 const csvToJson = require('csvtojson');
 const { convert } = require('html-to-text');
 const { throws } = require('assert');
+const { Console } = require('console');
 
 // Create Express Server
 const app = express();
@@ -55,7 +56,7 @@ function createItemfromProduct(product, categories, brands) {
         if (product["category"] != null && category["shoprenter"] != null) {
 
 
-            if (product["category"].toString().trim() === category["shoprenter"].toString().trim()) {
+            if (product["category"].toString().replace(/\s+/g, '') === category["shoprenter"].toString().replace(/\s+/g, '')) {
                 product_category = category["mall"];
             }
         }
