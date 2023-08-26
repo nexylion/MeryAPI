@@ -85,7 +85,7 @@ function createItemfromProduct(product, categories, brands) {
         reg2 = new RegExp(/\?v=.*./);
         reg3 = new RegExp(/\/\/.+?\.hu/);
 
-        return url.replace(reg, "data/").replace(reg2, "").replace(reg3, "www.marapiac.hu");
+        return url.replace(reg, "data/").replace(reg2, "").replace(reg3, "//www.marapiac.hu");
     }
 
 
