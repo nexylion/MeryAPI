@@ -98,7 +98,7 @@ function createItemfromProduct(product, categories, brands) {
 
         });
     }
-    if (product["image_url_2"]) {
+    if (product["image_url_2"] && (product["image_url_2"] != product["image_url"])) {
         media.push({
             URL: imageUrlEdit(product["image_url_2"]),
             MAIN: false,
@@ -106,7 +106,7 @@ function createItemfromProduct(product, categories, brands) {
             INFORMATION_LIST: false
         });
     }
-    if (product["image_url_3"]) {
+    if (product["image_url_3"] && (product["image_url_3"] != product["image_url"] && (product["image_url_2"] != product["image_url_3"]))) {
         media.push({
             URL: imageUrlEdit(product["image_url_3"]),
             MAIN: false,
