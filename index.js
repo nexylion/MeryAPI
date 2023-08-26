@@ -94,7 +94,7 @@ function createItemfromProduct(product, categories, brands) {
         INFORMATION_LIST: false
     });
     media.push({
-        URL: product["image_url_3"].replace(reg, "data/product/").replace(reg2, ""),
+        URL: product["image_url_3"].replace(reg, "data/").replace(reg2, ""),
         MAIN: false,
         ENERGY_LABEL: false,
         INFORMATION_LIST: false
