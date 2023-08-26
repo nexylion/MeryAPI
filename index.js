@@ -90,7 +90,7 @@ function createItemfromProduct(product, categories, brands) {
 
 
     media.push({
-        URL: imageUrlEdit(product["image_url_1"]),
+        URL: imageUrlEdit(product["image_url"]),
         MAIN: true,
 
     });
