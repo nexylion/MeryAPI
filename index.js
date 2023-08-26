@@ -79,22 +79,29 @@ function createItemfromProduct(product, categories, brands) {
     let salePrice = Math.round(product["price_special"] * 0.127) * 10;
     let rPrice = Math.round(product["price"] * 0.127) * 10;
     let media = [];
-    reg = new RegExp('cache\/.+?\/')
-    reg2 = new RegExp(/\?v=.*./)
+
+    function imageUrlEdit(url) {
+        reg = new RegExp('cache\/.+?\/');
+        reg2 = new RegExp(/\?v=.*./);
+        reg3 = new RegExp(/\/\/.+?\.hu/);
+
+        return url.replace(reg, "data/").replace(reg2, "").replace(reg3, "www.marapiac.hu");
+    }
+
 
     media.push({
-        URL: product["image_url"].replace(reg, "data/").replace(reg2, ""),
+        URL: imageUrlEdit(product["image_url_1"]),
         MAIN: true,
 
     });
     media.push({
-        URL: product["image_url_2"].replace(reg, "data/").replace(reg2, ""),
+        URL: imageUrlEdit(product["image_url_2"]),
         MAIN: false,
         ENERGY_LABEL: false,
         INFORMATION_LIST: false
     });
     media.push({
-        URL: product["image_url_3"].replace(reg, "data/").replace(reg2, ""),
+        URL: imageUrlEdit(product["image_url_3"]),
         MAIN: false,
         ENERGY_LABEL: false,
         INFORMATION_LIST: false
