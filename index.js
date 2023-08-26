@@ -55,7 +55,7 @@ function createItemfromProduct(product, categories, brands) {
         if (product["category"] != null && category["shoprenter"] != null) {
 
 
-            if (product["category"].toString() == category["shoprenter"].toString()) {
+            if (product["category"].toString().trim() === category["shoprenter"].toString().trim()) {
                 product_category = category["mall"];
             }
         }
