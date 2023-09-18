@@ -1,0 +1,3 @@
+function doSmtwithVariable(file) {
+
+}

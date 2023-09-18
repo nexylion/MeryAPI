@@ -1,13 +1,14 @@
-const express = require('express');
-const fs = require('fs');
-const morgan = require("morgan");
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-const { XMLParser, XMLValidator, XMLBuilder } = require('fast-xml-parser');
-const path = require('path');
-const csvToJson = require('csvtojson');
-const { convert } = require('html-to-text');
-const { throws } = require('assert');
-const { Console } = require('console');
+import express from 'express';
+import { readFile, readFileSync, writeFile } from 'fs';
+import morgan from "morgan";
+import { XMLHttpRequest } from "xmlhttprequest";
+import { XMLParser, XMLValidator, XMLBuilder } from 'fast-xml-parser';
+import { resolve as _resolve, resolve } from 'path';
+import csvToJson from 'csvtojson';
+import { throws } from 'assert';
+import { createItemfromProduct } from "./createItemfromProduct.js";
+import { stringEqualizer } from './stringEqualizer.js';
+import { createAvalibilityfromProduct } from './createAvalibilityfromProduct.js';
 
 // Create Express Server
 const app = express();
@@ -16,9 +17,6 @@ const timeout = 10 * 60 * 1000; // timeout 10mins
 // Configuration
 const PORT = 80;
 const HOST = "0.0.0.0";
-const API_SERVICE_URL = "https://jsonplaceholder.typicode.com";
-
-
 
 // encode to base64
 function encode(username, password) {
@@ -42,120 +40,13 @@ function csvToArr(stringVal, splitter) {
     });
     return formedArr;
 }
-//simple string formatting
-function stringEqualizer(manufacturer) {
-    return manufacturer.toUpperCase().replace(/\s/g, '');;
-
-}
-
-function createItemfromProduct(product, categories, brands) {
-    let product_category = "";
-
-    categories.forEach(category => {
-
-        if (product["category"] != null && category["shoprenter"] != null) {
 
 
-            if (product["category"].toString().replace(/\s+/g, '') === category["shoprenter"].toString().replace(/\s+/g, '')) {
-                product_category = category["mall"];
-            }
-        }
 
-    });
-    let product_brand = "MERYSTYLE";
-    for (let i = 0; i < brands.length; i++) {
-        if (stringEqualizer(product["manufacturer"].toString()) == "MERYSTYLE") { break }
-        if (stringEqualizer(product["manufacturer"].toString()) == "HOLMI") { break }
-        if (stringEqualizer(product["manufacturer"].toString()) == "MARASHOP") { break }
-        const brand = brands[i];
-        if (product["manufacturer"] != null && brand["title"] != null) {
-            if (stringEqualizer(product["manufacturer"].toString()) == stringEqualizer(brand["title"].toString())) {
-                product_brand = brand["brand_id"];
-                break;
-            }
-        }
-    }
-
-    let shortdesc = "";
-    let salePrice = Math.round(product["price_special"] * 0.127) * 10;
-    let rPrice = Math.round(product["price"] * 0.127) * 10;
-    let media = [];
-
-    function imageUrlEdit(url) {
-        reg = new RegExp('cache\/.+?\/');
-        reg2 = new RegExp(/\?v=.*./);
-        reg3 = new RegExp(/\/\/.+?\.hu/);
-
-        return url.replace(reg, "data/").replace(reg2, "").replace(reg3, "//www.marapiac.hu");
-    }
-
-    if (product["image_url"]) {
-
-
-        media.push({
-            URL: imageUrlEdit(product["image_url"]),
-            MAIN: true,
-
-        });
-    }
-    if (product["image_url_2"] && (product["image_url_2"] != product["image_url"])) {
-        media.push({
-            URL: imageUrlEdit(product["image_url_2"]),
-            MAIN: false,
-            ENERGY_LABEL: false,
-            INFORMATION_LIST: false
-        });
-    }
-    if (product["image_url_3"] && (product["image_url_3"] != product["image_url"] && (product["image_url_2"] != product["image_url_3"]))) {
-        media.push({
-            URL: imageUrlEdit(product["image_url_3"]),
-            MAIN: false,
-            ENERGY_LABEL: false,
-            INFORMATION_LIST: false
-        });
-    }
-    shortdesc = convert(product["description"]).substring(0, 150) + "...";
-    let Item = {
-        "ID": "Mery" + product["product_id"],
-        "STAGE": "TESTING",
-        "CATEGORY_ID": product_category,
-        "BRAND_ID": product_brand, //PRODUCT_BRAND default is MERYSTYLE
-        "TITLE": product["name"],
-        "SHORTDESC": shortdesc,
-        "LONGDESC": product["description"],
-        "PRIORITY": 1,
-        "PACKAGE_SIZE": "smallbox",
-        "BARCODE": product["ean"],
-        "PRICE": salePrice,
-        "VAT": 27,
-        "RRP": rPrice,
-        "PARAM": undefined, //todo
-        "MEDIA": media,
-        "DELIVERY_DELAY": 4
-
-    };
-
-    return Item;
-}
-
-function createAvalibilityfromProduct(product) {
-    let active = false;
-    if (product["stock"] != 0) {
-        active = true
-    }
-    let AVAILABILITY = {
-        ID: "Mery" + product["product_id"],
-        IN_STOCK: product["stock"],
-        ACTIVE: active
-    }
-    return AVAILABILITY;
-
-}
-//returns a jsonobject from an xml file
-function getFromFile(filepath) {
+function getFromFile(filepath, jsonFile = false) {
     return new Promise((resolve, reject) => {
 
-        fs.readFile((path.resolve(filepath)), 'utf8', (err, data) => {
+        readFile((_resolve(filepath)), 'utf8', (err, data) => {
             if (err) {
                 console.error(err);
                 reject(err);
@@ -175,11 +66,26 @@ function getFromFile(filepath) {
 async function formatXml() {
 
     let Item = [];
-    let BrandsXml = JSON.parse(fs.readFileSync("brands.xml"));
+    let BrandsXml = JSON.parse(readFileSync("brands.xml"));
     let categories = await csvToJson().fromFile("kategoriak.csv");
-    let jsonObj = await getFromFile('response.xml');
+    let jsonObj = await getFromFile(resolve('response.xml'));
+    let variablesFile = readFileSync("response.json");
+    let variableJSON = JSON.parse(variablesFile);
+
     jsonObj["products"]["product"].forEach(element => {
-        Item.push(createItemfromProduct(element, categories, BrandsXml["data"]));
+        let found = false;
+        for (let i = 0; i < variableJSON.length; i++) {
+            let variable = variableJSON[i];
+
+            if (element["sku"] == variable["sku"]) {
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            Item.push(createItemfromProduct(element, categories, BrandsXml["data"]));
+        }
+
     });
     let Items = {
         "ITEMS": {
@@ -235,6 +141,7 @@ app.get('/xmlOutput', (req, res, next) => {
         res.send(xml);
     })();
 });
+//avalability feed for mall 
 app.get('/avalability', (req, res, next) => {
 
     const now = Date.now();
@@ -249,15 +156,13 @@ app.get('/avalability', (req, res, next) => {
         res.send(xml);
     })();
 });
-// Updating response.xml with data from Shoprenter
-
 app.get('/Update', (req, res, next) => {
-    const api_url = "https://www.marapiac.hu/api/?route=export/feed&id=emag";
+    const api_url = "https://www.medyshop.hu/api/?route=export/feed&id=emag";
     console.log("update started!");
     var xhr = new XMLHttpRequest();
 
     xhr.open("GET", api_url);
-    xhr.setRequestHeader("Authorization", "bWFyYXNob3A6TWFyYTEyMzQ=");
+    xhr.setRequestHeader("Authorization", "bWVkeXNob3AxOm1lZHlzaG9wMQ==");
     xhr.onprogress = event => {
         // event.loaded returns how many bytes are downloaded
         // event.total returns the total number of bytes
@@ -267,7 +172,7 @@ app.get('/Update', (req, res, next) => {
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             console.log(xhr.status);
-            fs.writeFile(path.resolve('response.xml'), xhr.responseText, (err) => {
+            writeFile(_resolve('response.xml'), xhr.responseText, (err) => {
                 // throws an error, you could also catch it here
                 if (err) throws(err);
 
@@ -295,7 +200,7 @@ app.get('/getBrands', (req, res, next) => {
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             console.log(xhr.status);
-            fs.writeFile(path.resolve('brands.xml'), xhr.responseText, (err) => {
+            writeFile(_resolve('brands.xml'), xhr.responseText, (err) => {
                 // throws an error, you could also catch it here
                 if (err) throws(err);
 

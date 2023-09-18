@@ -1,8 +1,12 @@
 {
+    "type": "module",
     "name": "mall-shoprenter-api",
     "version": "1.0.0",
-    "main": "index.js",
+    "exports": "./index.js",
     "license": "MIT",
+    "engines": {
+        "node": ">=16"
+    },
     "dependencies": {
         "csv-parse": "^5.4.0",
         "csvtojson": "^2.0.10",
@@ -10,11 +14,13 @@
         "fast-xml-parser": "^4.2.6",
         "fetch": "^1.1.0",
         "fs": "^0.0.1-security",
+        "got": "^13.0.0",
         "html-to-text": "^9.0.5",
         "http-proxy-middleware": "^2.0.6",
         "morgan": "^1.10.0",
         "node-fetch": "^2.6.12",
         "puppeteer": "^20.7.4",
+        "request": "^2.88.2",
         "xml2js": "^0.6.1",
         "xmlhttprequest": "^1.8.0"
     },
