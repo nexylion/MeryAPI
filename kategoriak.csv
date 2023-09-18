@@ -1,139 +1,206 @@
-"id","shoprenter","mall"
-107,"Autós felszerelés > Rádió","ED022"
-118,"Autós felszerelés > Autós kamerák","EE031"
-117,"Autós felszerelés > Telefon és GPS tartók","EF018"
-123,"Autós felszerelés > Egyéb autós felszerelések","NC036"
-215,"Lakberendezés > Kanapétakaró huzat","ND159"
-125,"Autós felszerelés > Üléshuzatok","ND335"
-119,"Autós felszerelés > Autós porszívók, autómosó készletek","ND363"
-120,"Autós felszerelés > Autós tárolás, rendezés","ND401"
-124,"Autós felszerelés > Látást segítő termékek","ND401"
-122,"Autós felszerelés > Radarok, detektorok","ND401"
-121,"Autós felszerelés > Autó javítási eszközök","ND403"
-92,"Lakberendezés > Ágynemű huzat","NK075"
-246,"Lakberendezés > Ágynemű > Takaró-Pléd","NK077"
-212,"Lakberendezés > Pléd, takaró","NK077"
-105,"Lakberendezés > Pléd, takaró > Polár Plüss Pléd 150x200 cm","NK077"
-110,"Lakberendezés > Pléd, takaró > Polár plüss pléd 180x200 cm","NK077"
-111,"Lakberendezés > Pléd, takaró > Polár plüss pléd 230x200 cm","NK077"
-116,"Lakberendezés > Pléd, takaró > Sellő farkú takarók","NK077"
-97,"Lakberendezés > Törölköző","NK079"
-213,"Lakberendezés > Lepedő","NK081"
-248,"Lakberendezés > Ágynemű > Párna","NK236"
-56,"Ruházat > Fehérnemű","NM058"
-171,"Ruházat > Fehérnemű > Melltartók","NM058"
-172,"Ruházat > Fehérnemű > Alsóneműk","NM059"
-180,"Ruházat > Harisnyák, harisnyanadrágok","NM069"
-170,"Ruházat > Harisnyák, harisnyanadrágok > Karcsúsított harisnyák","NM069"
-202,"Ajándékozás","NK104"
-65,"Ajándékozás > Játékok","NF015"
-151,"Ajándékozás > Játékok > Felnőtteknek","NE088"
-152,"Ajándékozás > Játékok > Gyerekeknek","NE088"
-189,"Ajándékozás > Leánybúcsú - Legénybúcsú","NL048"
-193,"Ajándékozás > Leánybúcsú - Legénybúcsú > 18+termékek","NL048"
-190,"Ajándékozás > Leánybúcsú - Legénybúcsú > Leánybúcsú kellékek","NL048"
-191,"Ajándékozás > Leánybúcsú - Legénybúcsú > Legénybúcsús kiegészítők","NL048"
-242,"Ajándékozás > Valentin napra","NK107"
-143,"Ajándékozás > Egyéb kütyük","NE088"
-236,"Állat felszerelés","NJ036"
-237,"Állat felszerelés > Cicáknak","NJ036"
-238,"Állat felszerelés > Kutyáknak","NJ036"
-90,"Autós felszerelés","ND142"
-188,"Erotika sziget","NL048"
-201,"Gyógyászati eszközök","NL020"
-222,"Gyógyászati eszközök > Egyéb egészségmegőrző termékek","NL020"
-220,"Gyógyászati eszközök > Horkolásgátló","NL020"
-163,"Gyógyászati eszközök > Látás és hallás segítő eszközök","NL020"
-165,"Gyógyászati eszközök > Polarizált fényterápiás termékek.","NL020"
-130,"Gyógyászati eszközök > Tartás javítók, rögzítők","NL020"
-162,"Gyógyászati eszközök > Térd rögzítők, bütyök korrigálók","NL020"
-221,"Gyógyászati eszközök > Ülőpárna","NK076"
-164,"Gyógyászati eszközök > Vérnyomásmérők, pulzusmérők","NL020"
-198,"Lakberendezés","NK076"
-214,"Lakberendezés > Ágykeret","NK076"
-115,"Lakberendezés > Ágynemű","NK075"
-106,"Lakberendezés > Ágynemű huzat > 3D állatmintás 7 részes ágynemű huzat garnitúrák","NK075"
-154,"Lakberendezés > Ágynemű huzat > 3D virágmintás 7 részes ágynemű huzat garnitúrák","NK075"
-113,"Lakberendezés > Ágynemű huzat > Fehér ágynemű huzat garnitúra és lepedő","NK075"
-112,"Lakberendezés > Ágynemű huzat > Modern 7 részes ágynemű huzat garnitúrák","NK075"
-114,"Lakberendezés > Ágynemű huzat > Nyári 7 részes ágynemű huzat garnitúrák","NK075"
-109,"Lakberendezés > Ágynemű huzat > Szivecskés mintás ágynemű huzatok","NK075"
-210,"Lakberendezés > Fürdőszobai kiegészítők","MP021FR"
-196,"Lakberendezés > Székek","ND185"
-203,"Műszaki cikk","EF022"
-79,"Műszaki cikk > Okosóra, Smart Watch","EF022"
-153,"Műszaki cikk > Antennák és Kiegészítők","EC012"
-184,"Műszaki cikk > HDMI kábelek - Telefon töltők","EG037"
-186,"Műszaki cikk > Laptop hűtök - USB ventilátorok","EG097"
-185,"Műszaki cikk > Mobil telefon - Mobil telefon felszerelés","EF034"
-195,"Műszaki cikk > Smart televíziók-Okos televíziók","EC025"
-91,"Műszaki cikk > Tábla gép","EF020"
-176,"Műszaki cikk > Térfigyelők- Kamerák - Hangszorók","EE031"
-182,"Műszaki cikk > TV-okosítók - Projektor","EC025"
-230,"Műszaki cikk > TV-okosítók - Projektor > TV-okosítók","EC025"
-86,"Műszaki cikk > Univerzális mobiltöltő","EG046"
-167,"Műszaki cikk > Univerzális mobiltöltő > Napelemes külső","EG046"
-168,"Műszaki cikk > Univerzális mobiltöltő > Powerbank","EG046"
-104,"Műszaki cikk > Virtuális termékek","EF020"
-155,"Műszaki cikk > Virtuális termékek > Virtuális termékek","EF020"
-183,"Műszaki cikk > Wifi ruterek - Wifi adapterek - Bluetooth","EG024"
-197,"Otthon és kert","NK198"
-231,"Otthon és kert > Csaptelep","ND417"
-147,"Otthon és kert > Elektronikai termékek","EF022"
-249,"Otthon és kert > Fejlámpák","ND595"
-219,"Otthon és kert > Háztartási termékek","NK198"
-144,"Otthon és kert > Háztartási termékek > Illatosítók - Szösztelenítők","NK056"
-146,"Otthon és kert > Háztartási termékek > Takarító eszközök","ND158"
-93,"Otthon és kert > Izzók","EC024"
-158,"Otthon és kert > Izzók > Gömb led izzó","EC024"
-159,"Otthon és kert > Izzók > Gömb led izzó csere csomag","EC024"
-156,"Otthon és kert > Izzók > Kukorica Led izzó","EC024"
-157,"Otthon és kert > Izzók > Kukorica led izzó csere csomag","EC024"
-161,"Otthon és kert > Izzók > Kültéri reflektorok","EC024"
-160,"Otthon és kert > Izzók > Led mécsesek","EC024"
-175,"Otthon és kert > Izzók > Led szalag - kis lámpák","EC024"
-245,"Otthon és kert > Kempingfőző","ND051"
-99,"Otthon és kert > Kerti termékek","NK198"
-150,"Otthon és kert > Kerti termékek > Függőágyak","ND446"
-179,"Otthon és kert > Kerti termékek > Párakapu","NK198"
-217,"Otthon és kert > Kerti termékek > Pavilonok","ND122"
-178,"Otthon és kert > Kerti termékek > Solár lámpák","ND595"
-132,"Otthon és kert > Kerti termékek > Szúnyogcsapdák, szúnyogriasztók","ND156"
-95,"Otthon és kert > Konyhai termékek","NK106"
-139,"Otthon és kert > Konyhai termékek > Edény garnitúrák","NK046"
-142,"Otthon és kert > Konyhai termékek > Kések - Szeletelők, vágók","NK052"
-218,"Otthon és kert > Konyhai termékek > Kulacsok","NB060"
-145,"Otthon és kert > Konyhai termékek > Mixerek - Evőeszközök","NA125"
-174,"Otthon és kert > Konyhai termékek > Polcok - Tárolok - állványok - Rendezők - Táskák","NK106"
-140,"Otthon és kert > Konyhai termékek > Serpenyők","NK047"
-101,"Otthon és kert > Konyhai termékek > Szilikon termékek","NK106"
-141,"Otthon és kert > Konyhai termékek > Tepsik - sütőformák","NK105"
-177,"Otthon és kert > Strandcikkek","NK198"
-88,"Otthon és kert > Szerszámok, kulcsok","NA107"
-216,"Otthon és kert > Ventilátor","EB004"
-54,"Ruházat","NM058"
-169,"Ruházat > Fehérnemű > Alakformáló fehérnemű","NM058"
-194,"Ruházat > Fehérnemű > Szexi fehérnemű","NM058"
-55,"Ruházat > Nadrágok - szoknyák","NM058"
-239,"Ruházat > Sapka-Fejpánt","NM058"
-173,"Ruházat > Zoknik","NM058"
-187,"Ruházat > Jelmezek","NM058"
-200,"Sport és fitness","NA346"
-137,"Sport és fitness > Egészség megőrzés","NA346"
-82,"Sport és fitness > Étrendkiegészítő","NA346"
-126,"Sport és fitness > Étrendkiegészítő > Immunerősítő","NA346"
-127,"Sport és fitness > Étrendkiegészítő > ízületek és a porcok","NA346"
-128,"Sport és fitness > Fogyókúra - Zsírégetés","NA346"
-136,"Sport és fitness > Sportszerek","NA346"
-131,"Sport és fitness > Stresszoldás - Masszírozók","EB010"
-199,"Szépségápolás","NL020"
-134,"Szépségápolás > Arcápolás, krémek","NL064"
-208,"Szépségápolás > Bőrfeszesítés, zsírégetés","MP012CS"
-133,"Szépségápolás > Hajvágók, hajszárítók","EB013"
-209,"Szépségápolás > Körömápolás","MP049CS"
-207,"Szépségápolás > Parfüm","NK017"
-205,"Szépségápolás > Szájápolás","NL027"
-206,"Szépségápolás > Szörtelenítés, borotválkozás","NL001"
-129,"Szépségápolás > Talpápolás, talpbetét","MP094CS"
-96,"Szépségápolás > Tetoválás, testdísz","MP066CS"
-211,"Szépségápolás > Egyéb kozmetikai termékek","NL020"
+"id","shoprenter","mall","param","value"
+284,"Ajándékozás","-",,
+291,"Ajándékozás > Egyéb kütyük","-",,
+288,"Ajándékozás > Játékok","-",,
+170,"Állat felszerelés","-",,
+280,"Állat felszerelés > Cicáknak","-",,
+327,"Állat felszerelés > Cicáknak > Játék","NJ014","CAT","YES"
+354,"Állat felszerelés > Cicáknak > Kaparófa","NJ029",,
+281,"Állat felszerelés > Kutyáknak","-",,
+356,"Állat felszerelés > Kutyáknak > Szőrápolás","NJ045","DOG","YES"
+355,"Állat felszerelés > Kutyáknak > Tisztasági","NJ004","DOG","YES"
+199,"Autós felszerelés","-",,
+208,"Autós felszerelés > Autó javítási eszközök","ND142",,
+202,"Autós felszerelés > Autós kamerák","EE031","TO_CAR","YES"
+203,"Autós felszerelés > Autós porszívók","ND350",,
+207,"Autós felszerelés > Autós tárolás, rendezés","ND401",,
+204,"Autós felszerelés > Egyéb autós felszerelések","ND142",,
+200,"Autós felszerelés > Rádió","ED022",,
+201,"Autós felszerelés > Telefon és GPS tartók","EF018","DETERMINATION_PC_AND","mobiltelefon"
+292,"Autós felszerelés > Üléshuzatok","ND335",,
+360,"Baba - mama","NF083",,
+162,"Gyógyászati eszközök","-",,
+169,"Gyógyászati eszközök > Egyéb egészségmegőrző termékek","NL020",,
+282,"Gyógyászati eszközök > Gyógy karkötők","-",,
+271,"Gyógyászati eszközök > Horkolásgátló","NL020",,
+363,"Gyógyászati eszközök > Lázmérők","NL020",,
+262,"Gyógyászati eszközök > Ülőpárna","NK076",,
+268,"Gyógyászati eszközök > Vérnyomásmérők","NL011",,
+160,"Lakberendezés","-",,
+249,"Lakberendezés > Ágynemű","-",,
+342,"Lakberendezés > Ágynemű > Párna","NK236",,
+165,"Lakberendezés > Ágynemű huzat","NK075",,
+218,"Lakberendezés > Ágynemű huzat > Fehér ágynemű huzat garnitúra és lepedő","NK075",,
+166,"Lakberendezés > Ágynemű huzat > Szivecskés mintás ágynemű huzatok","NK075",,
+369,"Lakberendezés > Cipősszekrény","NK196","CABINET_TYPE","cipő"
+246,"Lakberendezés > Fürdőszobai kiegészítők","-",,
+445,"Lakberendezés > Fürdőszobai kiegészítők > Csaptelep hosszabbító","ND252","TYPE_OF_USE","Kádhoz,Bidéhez,Zuhanyhoz"
+374,"Lakberendezés > Fürdőszobai kiegészítők > Egyéb","NK009","BATHROOM_TYPE","Kiegészítők,Állványok, tartók"
+371,"Lakberendezés > Fürdőszobai kiegészítők > Szappanadagolók","NK009","BATHROOM_TYPE","Automata szappanadagoló"
+324,"Lakberendezés > Fürdőszobai kiegészítők > Szárítók","ND085","INSIDE","YES"
+309,"Lakberendezés > Fürdőszobai kiegészítők > Tükrök","NL010",,
+251,"Lakberendezés > Kanapétakaró huzat","ND159","ND159_TYPE","védőcsomagolás"
+219,"Lakberendezés > Lepedő","NK081",,
+276,"Lakberendezés > Pléd, takaró","NK077",,
+304,"Lakberendezés > Pléd, takaró > Polár plüss pléd 180x200 cm","NK077",,
+278,"Lakberendezés > Pléd, takaró > Polár plüss pléd 230x200 cm","NK077",,
+279,"Lakberendezés > Pléd, takaró > Sellő farkú takarók","NK077",,
+368,"Lakberendezés > Szállítás","ND217",,
+250,"Lakberendezés > Székek","NK239","CHAIR_TYPE","gamer karosszék,gamer szék,irodai karosszék,irodai szék"
+248,"Lakberendezés > Törölköző","NK079",,
+448,"Lakberendezés > TV kiegészítők","EC018",,
+164,"Műszaki cikk","-",,
+272,"Műszaki cikk > Antennák és Kiegészítők","EC012",,
+392,"Műszaki cikk > Elemtöltő","EE003",,
+431,"Műszaki cikk > Fúrók","ND057","DRILLING","NO"
+275,"Műszaki cikk > Kábelek","EG037",,
+386,"Műszaki cikk > Hosszabbítók","ND076",,
+312,"Műszaki cikk > Játékkonzolok","EG026",,
+390,"Műszaki cikk > Külső merevlemez ház","EG044","TYPE_EG044","külső meghajtó tok"
+211,"Műszaki cikk > Laptop hűtök","-",,
+426,"Műszaki cikk > Megszakítók","ND623",,
+339,"Műszaki cikk > Mini ventilátor","EB004",,
+180,"Műszaki cikk > Mobil telefon - Mobil telefon felszerelés","EF034",,
+389,"Műszaki cikk > Mosógép","EA027",,
+329,"Műszaki cikk > Nyomtatók","EG002","TYPE_OF_PRINTER_AND","hordozható"
+269,"Műszaki cikk > Okosóra, Smart Watch","EF022",,
+397,"Műszaki cikk > Okosóra, Smart Watch > Kiegészítők","EF032",,
+429,"Műszaki cikk > Ózongenerátor","ND538",,
+377,"Műszaki cikk > Perifériák","-",,
+383,"Műszaki cikk > Perifériák > Egér","EG241",,
+380,"Műszaki cikk > Perifériák > Egérpad","EG240",,
+394,"Műszaki cikk > Fülhallgató","ED006",,
+428,"Műszaki cikk > Perifériák > Hangszórók","EG008",,
+436,"Műszaki cikk > Porszívók","EB040",,
+274,"Műszaki cikk > Routerek","EG024","TYPE_OF_DEVICE","router"
+399,"Műszaki cikk > Routerek > Wifi jelerősítő","EG024","TYPE_OF_DEVICE","extender"
+430,"Műszaki cikk > Sarokcsiszolók","ND071",,
+273,"Műszaki cikk > Smart televíziók-Okos televíziók","-",,
+407,"Műszaki cikk > Szegélynyíró","ND094","POWER_TYPE","nem eltávolítható akkumulátor,eltávolítható akkumulátor"
+188,"Műszaki cikk > Térfigyelők- Kamerák","EG072",,
+242,"Műszaki cikk > TV-okosítók - Projektor","EG016",,
+243,"Műszaki cikk > TV-okosítók - Projektor > TV-távirányítók","EC023",,
+196,"Műszaki cikk > Univerzális mobiltöltő","EF011",,
+197,"Műszaki cikk > Univerzális mobiltöltő > Napelemes külső","-",,
+198,"Műszaki cikk > Univerzális mobiltöltő > Powerbank","-",,
+433,"Műszaki cikk > Vasalók","EB033",,
+190,"Műszaki cikk > Virtuális termékek","EG079","TYPE_OF_GAME_DEVICE","virtuális valóság"
+191,"Műszaki cikk > Virtuális termékek > Virtuális termékek","EG079","TYPE_OF_GAME_DEVICE","virtuális valóság"
+294,"Műszaki cikk > Karaoké - Mikrofonok","EG050",,
+157,"Otthon és kert","-",,
+247,"Otthon és kert > Csaptelep","NH018",,
+296,"Otthon és kert > Dekorációk-Karácsonyi fények","NK107","NK107_TYPE","labda,dísz,készlet,tető"
+237,"Otthon és kert > Elektronikai termékek","-",,
+338,"Otthon és kert > Elektronikai termékek > Fűrészek","ND095","POWER_TYPE","nem eltávolítható akkumulátor,eltávolítható akkumulátor"
+307,"Otthon és kert > Fejlámpák","MP024FE",,
+205,"Otthon és kert > Háztartási termékek","-",,
+299,"Otthon és kert > Háztartási termékek > Asztalok","NK191","TABLE_TYP","kávézóasztal,éjjeliszekrény,kisasztal,toalett asztal,konyhasziget,tálalóasztal"
+344,"Otthon és kert > Háztartási termékek > Diffúzorok","NK215",,
+297,"Otthon és kert > Háztartási termékek > Ébresztő órák","NK005",,
+440,"Otthon és kert > Háztartási termékek > Fogasok","NK207",,
+245,"Otthon és kert > Háztartási termékek > Illatosítók","NK056",,
+298,"Otthon és kert > Háztartási termékek > Kulcstartók - Lézerfények","-",,
+352,"Otthon és kert > Háztartási termékek > Lábtörlők","NK049","DOORMAT","YES"
+438,"Otthon és kert > Háztartási termékek > Pénztárcák","NA085","TYPE","tárca"
+423,"Otthon és kert > Háztartási termékek > Személyi mérleg","EB012",,
+409,"Otthon és kert > Háztartási termékek > Szúnyogháló","NA104",,
+206,"Otthon és kert > Háztartási termékek > Takarító eszközök","ND158",,
+443,"Otthon és kert > Háztartási termékek > Vákuumozó","EB081",,
+417,"Otthon és kert > Háztartási termékek > Varrógépek","EB016","OVERLOCK","NO"
+402,"Otthon és kert > Horgász felszerelés","-",,
+412,"Otthon és kert > Horgász felszerelés > Horgász mérleg","MP107FE",,
+405,"Otthon és kert > Horgász felszerelés > Kapásjelző","MP114FE",,
+404,"Otthon és kert > Horgász felszerelés > Székek","MP061FE",,
+158,"Otthon és kert > Izzók","EC024",,
+223,"Otthon és kert > Izzók > Gömb led izzó","EC024",,
+225,"Otthon és kert > Izzók > Gömb led izzó csere csomag","EC024",,
+221,"Otthon és kert > Izzók > Kukorica Led izzó","EC024",,
+222,"Otthon és kert > Izzók > Kukorica led izzó csere csomag","EC024",,
+159,"Otthon és kert > Izzók > Kültéri reflektorok","NA163","NA163_TYPE","lámpa,zseblámpa"
+226,"Otthon és kert > Izzók > Led mécsesek","EC024",,
+168,"Otthon és kert > Izzók > Led szalag - kis lámpák","EC024",,
+161,"Otthon és kert > Kerti termékek","-",,
+332,"Otthon és kert > Kerti termékek > Akkumulátoros","-",,
+238,"Otthon és kert > Kerti termékek > Függőágyak","ND446",,
+451,"Otthon és kert > Kerti termékek > Grill","ND051",,
+452,"Otthon és kert > Kerti termékek > Medence kiegészítők","ND121",,
+316,"Otthon és kert > Kerti termékek > Öntözés","ND107",,
+239,"Otthon és kert > Kerti termékek > Párakapu","-",,
+240,"Otthon és kert > Kerti termékek > Pavilonok","ND122",,
+224,"Otthon és kert > Kerti termékek > Rovarcsapdák, szúnyogriasztók","ND156",,
+333,"Otthon és kert > Kerti termékek > Sátrak","NA155",,
+210,"Otthon és kert > Kerti termékek > Solár lámpák","NK225",,
+227,"Otthon és kert > Konyhai termékek","-",,
+229,"Otthon és kert > Konyhai termékek > Edény garnitúrák","NK046","SET_OF_POTS","YES"
+469,"Otthon és kert > Konyhai termékek > Fazekak","NK046",,
+418,"Otthon és kert > Konyhai termékek > Főzőlapok","EA020",,
+335,"Otthon és kert > Konyhai termékek > Fűszertartó","NK060",,
+460,"Otthon és kert > Konyhai termékek > Gázfőzők","NA179",,
+337,"Otthon és kert > Konyhai termékek > Grill eszközök","ND134",,
+455,"Otthon és kert > Konyhai termékek > Húsdarálók","EB078",,
+349,"Otthon és kert > Konyhai termékek > Kés tartozékok","NK053",,
+300,"Otthon és kert > Konyhai termékek > Kések - Szeletelők, vágók","NK052",,
+232,"Otthon és kert > Konyhai termékek > Szeletelők","EB104","EB104_TYPE","zöldségszeletelő"
+346,"Otthon és kert > Konyhai termékek > Késélezők","NK053","TYPE_NK053","élező"
+466,"Otthon és kert > Konyhai termékek > Konyhai különlegesség","EB020",,
+463,"Otthon és kert > Konyhai termékek > Konyhai textilek","NK102",,
+302,"Otthon és kert > Konyhai termékek > Kulacsok","NB060",,
+415,"Otthon és kert > Konyhai termékek > Melegszendvics sütő","EB030","SANDWICH","YES"
+421,"Otthon és kert > Konyhai termékek > Mérlegek","NK071",,
+320,"Otthon és kert > Konyhai termékek > Mini sütő","EA061",,
+233,"Otthon és kert > Konyhai termékek > Mixerek - Evőeszközök","EB027",,
+457,"Otthon és kert > Konyhai termékek > Olajsütő","EB026",,
+330,"Otthon és kert > Konyhai termékek > Ollók","NK061",,
+234,"Otthon és kert > Konyhai termékek > Polcok - Tárolok - állványok - Rendezők - Táskák","NK043",,
+230,"Otthon és kert > Konyhai termékek > Serpenyők","NK047",,
+228,"Otthon és kert > Konyhai termékek > Szilikon termékek","NK103",,
+322,"Otthon és kert > Konyhai termékek > Tálak","NK011","TYPE_NK011","konyhai tál"
+231,"Otthon és kert > Konyhai termékek > Tepsik - sütőformák","NK105",,
+462,"Otthon és kert > Konyhai termékek > Vízforralók","NK023","TYPE_OF_VESSEL","vízforraló"
+295,"Otthon és kert > Ragasztók-Ragasztószalagok","ND182",,
+192,"Otthon és kert > Strandcikkek","ND121",,
+235,"Otthon és kert > Szerszámok, kulcsok","ND179",,
+212,"Otthon és kert > Ventilátor","EB005","TYPE_EB005","CHILLER"
+193,"Sport és fitness","-",,
+264,"Sport és fitness > Egészség megőrzés","NL020",,
+194,"Sport és fitness > Étrendkiegészítő","-",,
+303,"Sport és fitness > Étrendkiegészítő >Immunerősítő","-",,
+195,"Sport és fitness > Étrendkiegészítő > ízületek és a porcok","-",,
+259,"Sport és fitness > Fogyókúra - Zsírégetés","NL020",,
+263,"Sport és fitness > Sportszerek","-",,
+476,"Sport és fitness > Sportszerek > Csónak","NA091",,
+478,"Sport és fitness > Sportszerek > Fitness","NA036",,
+474,"Sport és fitness > Sportszerek > Hálózsák","MP118FE",,
+481,"Sport és fitness > Sportszerek > Hátizsák","NA003",,
+471,"Sport és fitness > Sportszerek > Kerékpár táska","NB069",,
+482,"Sport és fitness > Sportszerek > Kerékpár üléshuzat","NB043",,
+353,"Sport és fitness > Sportszerek > Roller","NE075","USAGE_NE","Kültér"
+215,"Sport és fitness > Stresszoldás - Masszírozók","EB010",,
+163,"Szépségápolás","-",,
+257,"Szépségápolás > Arcápolás, krémek","-",,
+318,"Szépségápolás > Arctisztítás","MP071CS",,
+260,"Szépségápolás > Bőrfeszesítés, zsírégetés","-",,
+253,"Szépségápolás > Egyéb kozmetikai termékek","NL027",,
+310,"Szépségápolás > Hajhosszabbítás","NL053",,
+255,"Szépségápolás > Hajvágók, hajszárítók","EB013",,
+483,"Szépségápolás > Hajvasalók","EB052",,
+261,"Szépségápolás > Körömápolás","EB011",,
+258,"Szépségápolás > Parfüm","-",,
+236,"Szépségápolás > Szájápolás","NL027",,
+323,"Szépségápolás > Szemöldök, szempilla","MP003CS",,
+256,"Szépségápolás > Szörtelenítés, borotválkozás","EB037",,
+254,"Szépségápolás > Talpápolás, talpbetét","NM023",,
+252,"Szépségápolás > Tetoválás, testdísz","-",,
+142,"Ruházat","-",,
+178,"Ruházat > Fehérnemű","-",,
+182,"Ruházat > Fehérnemű > Alakformáló fehérnemű","-",,
+184,"Ruházat > Fehérnemű > Alsóneműk","-",,
+183,"Ruházat > Fehérnemű > Melltartók","-",,
+179,"Ruházat > Fehérnemű > Szexi fehérnemű","-",,
+173,"Ruházat > Harisnyák, harisnyanadrágok","-",,
+241,"Ruházat > Harisnyák, harisnyanadrágok > Karcsúsított harisnyák","-",,
+174,"Ruházat > Jelmezek","-",,
+171,"Ruházat > Nadrágok - szoknyák","-",,
+181,"Ruházat > Sapka-Fejpánt","-",,
+172,"Ruházat > Zoknik","-",,
+145,"Legújabb termékek","-",,

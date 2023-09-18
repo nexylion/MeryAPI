@@ -3,7 +3,7 @@ import { stringEqualizer } from './stringEqualizer.js';
 
 export function createItemfromProduct(product, categories, brands) {
     let product_category = "";
-
+    let Param;
     categories.forEach(category => {
 
         if (product["category"] != null && category["shoprenter"] != null) {
@@ -11,6 +11,13 @@ export function createItemfromProduct(product, categories, brands) {
 
             if (product["category"].toString().replace(/\s+/g, '') === category["shoprenter"].toString().replace(/\s+/g, '')) {
                 product_category = category["mall"];
+                if (category["param"]) {
+                    Param = {
+                        'NAME': category["param"],
+                        'VALUE': category["value"]
+                    }
+
+                }
             }
         }
 
@@ -81,7 +88,7 @@ export function createItemfromProduct(product, categories, brands) {
         "PRICE": salePrice,
         "VAT": 27,
         "RRP": rPrice,
-        "PARAM": undefined,
+        "PARAM": Param,
         "MEDIA": media,
         "DELIVERY_DELAY": 4
     };
