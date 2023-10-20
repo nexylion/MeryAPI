@@ -6,7 +6,7 @@ export function createItemfromProduct(product, categories, brands) {
     let Param;
     categories.forEach(category => {
 
-        if (product["category"] != null && category["shoprenter"] != null) {
+        if (product["category"] != null && category["shoprenter"] != null || category["shoprenter"] != '-') {
 
 
             if (product["category"].toString().replace(/\s+/g, '') === category["shoprenter"].toString().replace(/\s+/g, '')) {
@@ -37,8 +37,8 @@ export function createItemfromProduct(product, categories, brands) {
     }
 
     let shortdesc = "";
-    let salePrice = Math.round(product["price_special"] * 0.127) * 10;
-    let rPrice = Math.round(product["price"] * 0.127) * 10;
+    let salePrice = Math.round(product["price_special"] * 0.127 * 1.23) * 10;
+    let rPrice = Math.round(product["price"] * 0.127 * 1.23) * 10;
     let media = [];
 
     function imageUrlEdit(url) {
@@ -73,14 +73,53 @@ export function createItemfromProduct(product, categories, brands) {
             INFORMATION_LIST: false
         });
     }
-    shortdesc = convert(product["description"]).substring(0, 150) + "...";
+    let reg = new RegExp(/<img.+?>/gm);
+    shortdesc = convert(product["description"].replace(reg, '')).replace(/\s+/g, ' ');
+
+    let shortdesc2;
+    let count = 0;
+    for (let i = 0; i < shortdesc.length; i++) {
+
+        let element = shortdesc[i];
+
+        if (element == '\t' || element == '\n' || element == '*') {
+            element = ' ';
+        }
+        if (element == '!' || element == '?' || element == ';') {
+            element = '.';
+        }
+        if (element == '[') {
+
+            break;
+        }
+        if (i == 0) {
+            shortdesc2 = element;
+        } else {
+            shortdesc2 += element
+        }
+        if (element == '.') {
+            count++;
+        }
+
+        if (count >= 3 || i >= 299) {
+
+            break;
+        }
+
+    }
+    shortdesc2 = shortdesc2.trim();
+    if (shortdesc2[shortdesc2.length - 1] != '.') {
+        shortdesc2 += '.'
+    }
+
+
     let Item = {
         "ID": "Mery" + product["product_id"],
         "STAGE": "TESTING",
         "CATEGORY_ID": product_category,
         "BRAND_ID": product_brand,
         "TITLE": product["name"],
-        "SHORTDESC": shortdesc,
+        "SHORTDESC": shortdesc2,
         "LONGDESC": product["description"],
         "PRIORITY": 1,
         "PACKAGE_SIZE": "smallbox",

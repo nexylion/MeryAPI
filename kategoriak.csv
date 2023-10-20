@@ -54,14 +54,15 @@ id,shoprenter,mall,param,value
 392,Műszaki cikk > Elemtöltő,EE003,,
 431,Műszaki cikk > Fúrók,ND057,DRILLING,NO
 275,Műszaki cikk > Kábelek,EG037,,
+490,Műszaki cikk > Kamera kiegészítők,EE036,,
 386,Műszaki cikk > Hosszabbítók,ND076,,
 312,Műszaki cikk > Játékkonzolok,EG026,,
 390,Műszaki cikk > Külső merevlemez ház,EG044,TYPE_EG044,külső meghajtó tok
 211,Műszaki cikk > Laptop hűtök,-,,
 426,Műszaki cikk > Megszakítók,ND623,,
-339,Műszaki cikk > Mini ventilátor,EB004,,
+339,Műszaki cikk > Mini ventilátor,-,,
 180,Műszaki cikk > Mobil telefon - Mobil telefon felszerelés,EF034,,
-389,Műszaki cikk > Mosógép,EA027,,
+389,Műszaki cikk > Mosógép,-,,
 329,Műszaki cikk > Nyomtatók,EG002,TYPE_OF_PRINTER_AND,hordozható
 269,"Műszaki cikk > Okosóra, Smart Watch",EF022,,
 397,"Műszaki cikk > Okosóra, Smart Watch > Kiegészítők",EF032,,
@@ -88,8 +89,8 @@ id,shoprenter,mall,param,value
 191,Műszaki cikk > Virtuális termékek > Virtuális termékek,EG079,TYPE_OF_GAME_DEVICE,virtuális valóság
 294,Műszaki cikk > Karaoké - Mikrofonok,EG050,,
 157,Otthon és kert,-,,
-247,Otthon és kert > Csaptelep,NH018,,
-296,Otthon és kert > Dekorációk-Karácsonyi fények,NK107,NK107_TYPE,dísz
+247,Otthon és kert > Csaptelep,-,,
+296,Otthon és kert > Dekorációk-Karácsonyi fények,-,,
 237,Otthon és kert > Elektronikai termékek,-,,
 338,Otthon és kert > Elektronikai termékek > Fűrészek,ND047,,
 307,Otthon és kert > Fejlámpák,MP024FE,,
@@ -111,14 +112,14 @@ id,shoprenter,mall,param,value
 412,Otthon és kert > Horgász felszerelés > Horgász mérleg,MP107FE,,
 405,Otthon és kert > Horgász felszerelés > Kapásjelző,MP114FE,,
 404,Otthon és kert > Horgász felszerelés > Székek,MP061FE,,
-158,Otthon és kert > Izzók,EC024,,
-223,Otthon és kert > Izzók > Gömb led izzó,EC024,,
-225,Otthon és kert > Izzók > Gömb led izzó csere csomag,EC024,,
-221,Otthon és kert > Izzók > Kukorica Led izzó,EC024,,
-222,Otthon és kert > Izzók > Kukorica led izzó csere csomag,EC024,,
-159,Otthon és kert > Izzók > Kültéri reflektorok,NA163,NA163_TYPE,lámpa
-226,Otthon és kert > Izzók > Led mécsesek,EC024,,
-168,Otthon és kert > Izzók > Led szalag - kis lámpák,EC024,,
+158,Otthon és kert > Izzók,-,,
+223,Otthon és kert > Izzók > Gömb led izzó,-,,
+225,Otthon és kert > Izzók > Gömb led izzó csere csomag,-,,
+221,Otthon és kert > Izzók > Kukorica Led izzó,-,,
+222,Otthon és kert > Izzók > Kukorica led izzó csere csomag,-,,
+159,Otthon és kert > Izzók > Kültéri reflektorok,-,,
+226,Otthon és kert > Izzók > Led mécsesek,-,,
+168,Otthon és kert > Izzók > Led szalag - kis lámpák,-,,
 161,Otthon és kert > Kerti termékek,-,,
 332,Otthon és kert > Kerti termékek > Akkumulátoros,-,,
 238,Otthon és kert > Kerti termékek > Függőágyak,ND446,,
@@ -129,7 +130,7 @@ id,shoprenter,mall,param,value
 240,Otthon és kert > Kerti termékek > Pavilonok,ND122,,
 224,"Otthon és kert > Kerti termékek > Rovarcsapdák, szúnyogriasztók",ND156,,
 333,Otthon és kert > Kerti termékek > Sátrak,NA155,,
-210,Otthon és kert > Kerti termékek > Solár lámpák,NK225,,
+210,Otthon és kert > Kerti termékek > Solár lámpák,-,,
 227,Otthon és kert > Konyhai termékek,-,,
 229,Otthon és kert > Konyhai termékek > Edény garnitúrák,NK046,SET_OF_POTS,YES
 469,Otthon és kert > Konyhai termékek > Fazekak,NK046,,
@@ -147,7 +148,7 @@ id,shoprenter,mall,param,value
 302,Otthon és kert > Konyhai termékek > Kulacsok,NB060,,
 415,Otthon és kert > Konyhai termékek > Melegszendvics sütő,EB030,SANDWICH,YES
 421,Otthon és kert > Konyhai termékek > Mérlegek,NK071,,
-320,Otthon és kert > Konyhai termékek > Mini sütő,EA061,,
+320,Otthon és kert > Konyhai termékek > Mini sütő,-,,
 233,Otthon és kert > Konyhai termékek > Mixerek - Evőeszközök,EB027,,
 457,Otthon és kert > Konyhai termékek > Olajsütő,EB026,,
 330,Otthon és kert > Konyhai termékek > Ollók,NK061,,
@@ -156,12 +157,14 @@ id,shoprenter,mall,param,value
 228,Otthon és kert > Konyhai termékek > Szilikon termékek,NK103,,
 322,Otthon és kert > Konyhai termékek > Tálak,NK011,TYPE_NK011,konyhai tál
 231,Otthon és kert > Konyhai termékek > Tepsik - sütőformák,NK105,,
-462,Otthon és kert > Konyhai termékek > Vízforralók,NK023,TYPE_OF_VESSEL,vízforraló
+487,Otthon és kert > Konyhai termékek > Tésztagépek,NK073,,
+462,Otthon és kert > Konyhai termékek > Vízforralók,-,,
 295,Otthon és kert > Ragasztók-Ragasztószalagok,ND182,,
 192,Otthon és kert > Strandcikkek,ND121,,
 235,"Otthon és kert > Szerszámok, kulcsok",ND179,,
-,,,,
-212,Otthon és kert > Ventilátor,EB005,,CHILLER
+491,"Otthon és kert > Szerszámok, kulcsok > Akkumulátorok",ND145,TYPE_ACCESSORY_ELECTRIC_TOOLS,töltő
+485,Otthon és kert > Szivattyúk,ND208,,
+212,Otthon és kert > Ventilátor,-,,
 193,Sport és fitness,-,,
 264,Sport és fitness > Egészség megőrzés,NL020,,
 194,Sport és fitness > Étrendkiegészítő,-,,
