@@ -101,7 +101,7 @@ export function createItemfromProduct(product, categories, brands) {
             count++;
         }
 
-        if (count >= 3 || i >= 299) {
+        if (count >= 3 || i >= 298) {
 
             break;
         }

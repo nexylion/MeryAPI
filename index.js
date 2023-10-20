@@ -85,7 +85,10 @@ async function formatXml() {
             }
         }
         if (!found) {
-            Item.push(createItemfromProduct(element, categories, BrandsXml["data"]));
+            let itemDummy = (createItemfromProduct(element, categories, BrandsXml["data"]));
+            if (itemDummy.CATEGORY_ID !== undefined && itemDummy.CATEGORY_ID !== '-') {
+                Item.push(itemDummy);
+            }
         }
 
     });
