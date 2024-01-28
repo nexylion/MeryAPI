@@ -70,6 +70,7 @@ async function formatXml() {
     let Item = [];
     let BrandsXml = JSON.parse(readFileSync("brands.xml"));
     let categories = await csvToJson().fromFile("kategoriak.csv");
+    let paramaters = await csvToJson().fromFile("paramaters.csv");
     let jsonObj = await getFromFile(resolve('response.xml'));
     let variablesFile = readFileSync("response.json");
     let variableJSON = JSON.parse(variablesFile);
@@ -85,7 +86,7 @@ async function formatXml() {
             }
         }
         if (!found) {
-            let itemDummy = (createItemfromProduct(element, categories, BrandsXml["data"]));
+            let itemDummy = (createItemfromProduct(element, categories, BrandsXml["data"], paramaters));
             if (itemDummy.CATEGORY_ID !== undefined && itemDummy.CATEGORY_ID !== '-') {
                 Item.push(itemDummy);
             }

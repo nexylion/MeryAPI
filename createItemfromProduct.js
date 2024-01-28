@@ -1,9 +1,9 @@
 import { convert } from 'html-to-text';
 import { stringEqualizer } from './stringEqualizer.js';
 
-export function createItemfromProduct(product, categories, brands) {
+export function createItemfromProduct(product, categories, brands, paramaters) {
     let product_category = "";
-    let Param;
+    let Params=[];
     categories.forEach(category => {
 
         if (product["category"] != null && category["shoprenter"] != null || category["shoprenter"] != '-') {
@@ -12,10 +12,10 @@ export function createItemfromProduct(product, categories, brands) {
             if (product["category"].toString().replace(/\s+/g, '') === category["shoprenter"].toString().replace(/\s+/g, '')) {
                 product_category = category["mall"];
                 if (category["param"]) {
-                    Param = {
+                    Params.push( {
                         'NAME': category["param"],
                         'VALUE': category["value"]
-                    }
+                    })
 
                 }
             }
@@ -112,6 +112,66 @@ export function createItemfromProduct(product, categories, brands) {
         shortdesc2 += '.'
     }
 
+    //parameter check
+    for (let i = 0; i < paramaters.length; i++) {
+        let parameter=paramaters[i]
+        let index=product["description"].indexOf(parameter["Prefix"])
+        //if prefix found
+        if(index==-1){
+            index=product["description"].toLowerCase().indexOf(parameter["Prefix"].toLowerCase())
+            if(index==-1){
+            continue;}
+            }
+            //if there is a default Value
+            if(parameter["ParamValue"]){
+                Params.push({
+                    NAME:parameter["ParamName"],
+                    VALUE:parameter["ParamValue"]
+                })
+                continue;
+            }
+        
+        let indexEnd = index;
+        while(!'<>.;'.includes(product["description"][indexEnd])){indexEnd+=1;}
+        let line = product["description"].substring(index, indexEnd);
+
+        if(parameter["Postfix"]){ 
+            let indexPost=line.toLowerCase().indexOf(parameter["Postfix"].toLowerCase())
+            if(indexPost==-1){continue;} 
+            //if Postfix found
+            line = line.substring(0,indexPost)
+    }   
+    line = line.substring(parameter["Prefix"].length)
+        let values = []
+        values.push(line)
+        if(parameter["Separator"]){
+           values = line.split(parameter["Separator"])
+           if (values.length==1){continue;}
+        }
+        if(values[0]){
+        Params.push({
+            NAME:parameter["ParamName"],
+            VALUE:values[0].toString().trim()
+        })}
+
+
+
+        if(parameter["ParamName2"]){
+            if(values[1]){
+            Params.push({
+                NAME:parameter["ParamName2"],
+                VALUE:values[1].toString().trim()
+            })
+        }}
+        if(parameter["ParamName3"]){
+            if(values[2]){
+            Params.push({
+                NAME:parameter["ParamName3"],
+                VALUE:values[2].toString().trim()
+            })
+        }}
+    }
+
 
     let Item = {
         "ID": "Mery" + product["product_id"],
@@ -127,7 +187,7 @@ export function createItemfromProduct(product, categories, brands) {
         "PRICE": salePrice,
         "VAT": 27,
         "RRP": rPrice,
-        "PARAM": Param,
+        "PARAM": Params,
         "MEDIA": media,
         "DELIVERY_DELAY": 4
     };
