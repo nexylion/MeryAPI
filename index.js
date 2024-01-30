@@ -80,7 +80,7 @@ async function formatXml() {
         for (let i = 0; i < variableJSON.length; i++) {
             let variable = variableJSON[i];
 
-            if (element["sku"] == variable["sku"]) {
+            if (element["sku"] == variable["sku"] || element["stock"]==0) {
                 found = true;
                 break;
             }
