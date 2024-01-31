@@ -116,7 +116,7 @@ export function createItemfromProduct(product, categories, brands, paramaters, p
     let paramBlacklist=[]
     for (let index = 0; index < paramCategories.length; index++) {
         const element = paramCategories[index];
-        if(element.Category_ID==product_category){
+        if(element["Category_ID;"]==product_category+";"){
             paramBlacklist.push(element.Param)
         }
         
