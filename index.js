@@ -1,7 +1,7 @@
 // TODO: ár változtatás
 
 import express from 'express';
-import { readFile, readFileSync, writeFile } from 'fs';
+import { readFile, readFileSync, writeFile, writeFileSync } from 'fs';
 import morgan from "morgan";
 import { XMLHttpRequest } from "xmlhttprequest";
 import { XMLParser, XMLValidator, XMLBuilder } from 'fast-xml-parser';
@@ -71,6 +71,7 @@ async function formatXml() {
     let BrandsXml = JSON.parse(readFileSync("brands.xml"));
     let categories = await csvToJson().fromFile("kategoriak.csv");
     let paramaters = await csvToJson().fromFile("paramaters.csv");
+    let paramCategories = await csvToJson().fromFile("badParamsToCategories.csv");
     let jsonObj = await getFromFile(resolve('response.xml'));
     let variablesFile = readFileSync("response.json");
     let variableJSON = JSON.parse(variablesFile);
@@ -86,13 +87,22 @@ async function formatXml() {
             }
         }
         if (!found) {
-            let itemDummy = (createItemfromProduct(element, categories, BrandsXml["data"], paramaters));
+            let itemDummy = (createItemfromProduct(element, categories, BrandsXml["data"], paramaters, paramCategories));
             if (itemDummy.CATEGORY_ID !== undefined && itemDummy.CATEGORY_ID !== '-') {
                 Item.push(itemDummy);
             }
         }
 
     });
+    // test begin:
+    let emptyParamItems=[]
+    Item.forEach(item => {
+        if(item.PARAM.length==0){
+           emptyParamItems.push(item);
+        }
+    });
+    writeFileSync("emptyParams.json",JSON.stringify(emptyParamItems));
+    // test end;
     let Items = {
         "ITEMS": {
             "ITEM": Item

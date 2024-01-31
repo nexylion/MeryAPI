@@ -1,8 +1,8 @@
 import { convert } from 'html-to-text';
 import { stringEqualizer } from './stringEqualizer.js';
 
-export function createItemfromProduct(product, categories, brands, paramaters) {
-    let product_category = "";
+export function createItemfromProduct(product, categories, brands, paramaters, paramCategories) {
+    let product_category = "-";
     let Params=[];
     categories.forEach(category => {
 
@@ -112,6 +112,15 @@ export function createItemfromProduct(product, categories, brands, paramaters) {
         shortdesc2 += '.'
     }
 
+    //parameter blacklist
+    let paramBlacklist=[]
+    for (let index = 0; index < paramCategories.length; index++) {
+        const element = paramCategories[index];
+        if(element.Category_ID==product_category){
+            paramBlacklist.push(element.Param)
+        }
+        
+    }
     //parameter check
     for (let i = 0; i < paramaters.length; i++) {
         let parameter=paramaters[i]
@@ -123,7 +132,7 @@ export function createItemfromProduct(product, categories, brands, paramaters) {
             continue;}
             }
             //if there is a default Value
-            if(parameter["ParamValue"]){
+            if(parameter["ParamValue"] && !paramBlacklist.includes(parameter["ParamName"])){
                 Params.push({
                     NAME:parameter["ParamName"],
                     VALUE:parameter["ParamValue"]
@@ -148,7 +157,7 @@ export function createItemfromProduct(product, categories, brands, paramaters) {
            values = line.split(parameter["Separator"])
            if (values.length==1){continue;}
         }
-        if(values[0]){
+        if(values[0] && !paramBlacklist.includes(parameter["ParamName"])){
         Params.push({
             NAME:parameter["ParamName"],
             VALUE:values[0].toString().trim()
@@ -156,14 +165,14 @@ export function createItemfromProduct(product, categories, brands, paramaters) {
 
 
 
-        if(parameter["ParamName2"]){
+        if(parameter["ParamName2"] && !paramBlacklist.includes(parameter["ParamName2"])){
             if(values[1]){
             Params.push({
                 NAME:parameter["ParamName2"],
                 VALUE:values[1].toString().trim()
             })
         }}
-        if(parameter["ParamName3"]){
+        if(parameter["ParamName3"]&& !paramBlacklist.includes(parameter["ParamName3"])){
             if(values[2]){
             Params.push({
                 NAME:parameter["ParamName3"],
@@ -171,6 +180,8 @@ export function createItemfromProduct(product, categories, brands, paramaters) {
             })
         }}
     }
+
+    
 
 
     let Item = {
